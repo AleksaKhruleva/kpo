@@ -3,25 +3,24 @@
  *  (1 балл)
  */
 fun replaceElements(array: List<String>): List<String> {
+    for (el in array) {
+        if (array.count { it == el } > 1) {
+            println("a")
+        }
+    }
+
     return listOfNotNull()
 }
 
-
-/**
- *  Задание 2: Вернуть количество уникальных слов в строке.
- *  Слова в строке обязательно разделяются пробелом.
- *  (1 балл)
- */
 fun uniqueWords(text: String): Int {
-    return 0
+    val splitted = text.split(' ')
+    return splitted.toSet().size
 }
 
-// Используйте эту функцию для запуска кода
-// Раскомментируйте нужные участки в процессе реализации
 fun main() {
-    //val text = ""
-    //println(uniqueWords(text))
+    val text = "a a a b c c c c d"
+    println(uniqueWords(text))
 
     // Вызвать для text и вывести результат замены на экран
-    //replaceElements()
+    replaceElements(text.split(' '))
 }

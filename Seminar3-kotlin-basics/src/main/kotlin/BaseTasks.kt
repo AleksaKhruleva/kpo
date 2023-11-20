@@ -31,7 +31,7 @@ fun main() {
     askForInput()
 
     val roots = quadraticRoots(-5.0, 4.0, 3.0)
-    println("X1 = ${roots.first} ; X2 =${roots.second}")
+    println("X1 = ${roots.first} ; X2 = ${roots.second}")
 
     printSameDigitNumbers()
 }

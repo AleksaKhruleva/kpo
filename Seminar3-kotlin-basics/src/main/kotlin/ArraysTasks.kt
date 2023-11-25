@@ -5,7 +5,7 @@ fun makeArray(): Array<Int> {
     val arr = Array<Int>(n) { 0 }
 
     for (i in 0..<n) {
-        print("Введите ${i}-й элемент: ")
+        print("Введите ${i + 1}-й элемент: ")
         val num = readln().toInt()
         arr[i] = num
     }
@@ -18,7 +18,7 @@ fun makeArray(): Array<Int> {
 
 fun sortArrayDesc(arr: Array<Int>) {
     arr.sortDescending()
-    print("Ваш массив отсортированный по убыванию: ")
+    print("Ваш массив, отсортированный по убыванию: ")
     println(arr.joinToString(" "))
 }
 

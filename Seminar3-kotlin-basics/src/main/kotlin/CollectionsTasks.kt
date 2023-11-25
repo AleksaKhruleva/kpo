@@ -1,26 +1,30 @@
-/**
- *  Задание 1: Заменить все повторяющиеся элементы входного списка на "blahblah".
- *  (1 балл)
- */
 fun replaceElements(array: List<String>): List<String> {
+    val res = mutableListOf<String>()
+    val unique = mutableListOf<String>()
+
     for (el in array) {
-        if (array.count { it == el } > 1) {
-            println("a")
+        if (unique.contains(el)) {
+            res.add("blahblah")
+        } else {
+            res.add(el)
+            unique.add(el)
         }
     }
 
-    return listOfNotNull()
+    return res
 }
 
 fun uniqueWords(text: String): Int {
-    val splitted = text.split(' ')
-    return splitted.toSet().size
+    val splitText = text.split(' ')
+    return splitText.toSet().size
 }
 
 fun main() {
-    val text = "a a a b c c c c d"
-    println(uniqueWords(text))
+    val text = "1 1 1 2 3 3 3 3 4 5 5"
 
-    // Вызвать для text и вывести результат замены на экран
-    replaceElements(text.split(' '))
+    val uw = uniqueWords(text)
+    println("В строке \"${text}\" кол-во уникальных значений = ${uw}")
+
+    val res = replaceElements(text.split(' '))
+    println("После замены всех повторяющихся элементов в строке мы получили \"${res.joinToString(" ")}\"")
 }

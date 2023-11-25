@@ -2,7 +2,7 @@ fun makeArray(): Array<Int> {
     print("Введите n - количество элементов массива: ")
     val n = readln().toInt()
 
-    val arr = Array<Int>(n) { 0 }
+    val arr = Array(n) { 0 }
 
     for (i in 0..<n) {
         print("Введите ${i + 1}-й элемент: ")

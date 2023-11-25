@@ -23,7 +23,7 @@ fun main() {
     val text = "1 1 1 2 3 3 3 3 4 5 5"
 
     val uw = uniqueWords(text)
-    println("В строке \"${text}\" кол-во уникальных значений = ${uw}")
+    println("В строке \"$text\" кол-во уникальных значений = $uw")
 
     val res = replaceElements(text.split(' '))
     println("После замены всех повторяющихся элементов в строке мы получили \"${res.joinToString(" ")}\"")

@@ -1,3 +1,4 @@
+import dependencyInversionPrinciple.badImplementation.Alerter
 import dependencyInversionPrinciple.badImplementation.Emailer
 import dependencyInversionPrinciple.badImplementation.Phone
 import dependencyInversionPrinciple.badImplementation.WeatherTracker

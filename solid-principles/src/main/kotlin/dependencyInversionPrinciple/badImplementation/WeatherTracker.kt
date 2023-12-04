@@ -1,7 +1,6 @@
 package dependencyInversionPrinciple.badImplementation
 
-class WeatherTracker (private var conditions: String, private val phone: Phone,
-    private val emailer: Emailer) {
+class WeatherTracker (private var conditions: String, private val phone: Alerter, private val emailer: Alerter) {
 
     fun setCurrentConditions(weatherDescription: String) {
         this.conditions = weatherDescription
@@ -14,5 +13,4 @@ class WeatherTracker (private var conditions: String, private val phone: Phone,
             print(alert)
         }
     }
-
 }

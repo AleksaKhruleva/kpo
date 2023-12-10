@@ -1,5 +1,4 @@
-package interfaceSegregationPrinciple.badImplementation
-
+package interfaceSegregationPrinciple.better_Implementation
 
 class Eagle(private var numberOfFeathers: Int): FeathersLosable, Flyable {
     private var currentLocation: String? = null

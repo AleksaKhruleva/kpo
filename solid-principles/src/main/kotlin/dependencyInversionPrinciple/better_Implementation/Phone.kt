@@ -1,4 +1,4 @@
-package dependencyInversionPrinciple.badImplementation
+package dependencyInversionPrinciple.better_Implementation
 
 class Phone: Alerter {
     override fun generateWeatherAlert(weatherConditions: String): String {

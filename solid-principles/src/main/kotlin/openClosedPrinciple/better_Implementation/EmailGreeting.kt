@@ -1,16 +1,26 @@
-package openClosedPrinciple.badImplementation
+package openClosedPrinciple.better_Implementation
 
-class EmailGreeting(private var formality: String) {
+abstract class EmailGreeting {
+    abstract val formality: String
+    abstract val greeting: String
+}
 
-    val greeting: String = when(formality) {
-        "formal" -> "Good evening, sir."
-        "casual" -> "Sup bro?"
-        "intimate" -> "Hello Darling!"
-        else -> "Hello!"
-    }
+class formalEmailGreeting: EmailGreeting() {
+    override val formality = "formal"
+    override val greeting: String = "Good evening, sir."
+}
 
-    fun setFormality(formality: String) {
-        this.formality = formality
-    }
+class casualEmailGreeting: EmailGreeting() {
+    override val formality = "casual"
+    override val greeting: String = "Sup bro?"
+}
 
+class intimateEmailGreeting: EmailGreeting() {
+    override val formality = "intimate"
+    override val greeting: String = "Hello Darling!"
+}
+
+class basicEmailGreeting: EmailGreeting() {
+    override val formality = "basic"
+    override val greeting: String = "Hello!"
 }

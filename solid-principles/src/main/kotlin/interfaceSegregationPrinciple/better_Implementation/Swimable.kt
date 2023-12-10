@@ -1,4 +1,4 @@
-package interfaceSegregationPrinciple.badImplementation
+package interfaceSegregationPrinciple.better_Implementation
 
 interface Swimable {
     fun swim()

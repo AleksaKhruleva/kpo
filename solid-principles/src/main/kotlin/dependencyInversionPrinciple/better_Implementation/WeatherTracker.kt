@@ -1,4 +1,4 @@
-package dependencyInversionPrinciple.badImplementation
+package dependencyInversionPrinciple.better_Implementation
 
 class WeatherTracker (private var conditions: String, private val phone: Alerter, private val emailer: Alerter) {
 

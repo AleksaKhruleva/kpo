@@ -1,5 +1,4 @@
-package interfaceSegregationPrinciple.badImplementation
-
+package interfaceSegregationPrinciple.better_Implementation
 
 class Penguin(private var numberOfFeathers: Int): FeathersLosable, Swimable {
     private var currentLocation: String? = null
